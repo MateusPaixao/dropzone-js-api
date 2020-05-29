@@ -10,9 +10,20 @@ cards.forEach(card => {
 })
 
 
-function dragstart(){
+function dragstart(e){
     // console.log('CARD: Start dragging')
     dropzones.forEach(dropzone => dropzone.classList.add('highlight'))
+
+    let cloneCard = this.cloneNode(true);
+    cloneCard.style.opacity = "1"
+    cloneCard.style.transform = "translateY(900px)";
+    document.querySelector('body').appendChild(cloneCard)
+
+    e.dataTransfer.setDragImage(cloneCard, 0, 0);
+
+     setTimeout(() => {
+         cloneCard.parentNode.removeChild(cloneCard);
+     }, 1000);
 
     this.classList.add('is-dragging')
 }
@@ -32,7 +43,6 @@ dropzones.forEach(dropzone => {
     dropzone.addEventListener('dragover', dragover)
     dropzone.addEventListener('dragleave', dragleave)
     dropzone.addEventListener('drop', drop)
-    dropzone.addEventListener('dragdrop', drop)
 })
 
 
@@ -40,7 +50,10 @@ function dragenter(){
     // console.log('DROPZONE: Enter in zone') // entrou na zona
 }
 
-function dragover(){
+function dragover(e){
+    e.preventDefault()
+    e.dataTransfer.dropEffect = 'move'
+
     this.classList.add('over')
     // console.log('DROPZONE: Over') // estou dentro na zona
 

@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     font-family: 'Nunito';
 }
@@ -73,8 +79,13 @@ body {
 }
 
 .is-dragging {
-    cursor: move;
+    border: 2px dashed #FD951Fcc;
+    cursor: none;
     opacity: 0.3;
+}
+
+.is-dragging * {
+    opacity: 0;
 }
 
 .over {
