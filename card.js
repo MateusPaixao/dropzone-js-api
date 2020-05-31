@@ -58,6 +58,7 @@ function dragover(e){
     // console.log('DROPZONE: Over') // estou dentro na zona
 
     const cardBeingDragged = document.querySelector('.is-dragging')
+
     this.appendChild(cardBeingDragged)
 }
 

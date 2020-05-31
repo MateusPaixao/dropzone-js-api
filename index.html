@@ -11,36 +11,47 @@
 <body>
 
     <div class="boards">
-        <div class="board">
-            <h3>Todo</h3>
-            <div class="dropzone">
-                <div class="card" draggable="true">
-                    <div class="status green"></div>
-                    <div class="content"> Do videos!</div>
+        <div class="column">
+            <div class="board" draggable="true">
+                <h3 class="handle-drag-title">Todo</h3>
+                <div class="dropzone">
+                    <div class="card" draggable="true">
+                        <div class="status green"></div>
+                        <div class="content"> Do videos!</div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="board">
-            <h3>In progress</h3>
-            <div class="dropzone">
-                <div class="card" draggable="true">
-                    <div class="status blue"></div>
-                    <div class="content"> Forum</div>
+        <div class="column">
+            <div class="board" draggable="true">
+                <h3 class="handle-drag-title">In progress</h3>
+                <div class="dropzone">
+                    <div class="card" draggable="true">
+                        <div class="status blue"></div>
+                        <div class="content"> Forum</div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="board">
-            <h3>Done</h3>
-            <div class="dropzone">
-                <div class="card" draggable="true">
-                    <div class="status red"></div>
-                    <div class="content"> Next Level Week</div>
+        <div class="column">
+            <div class="board" draggable="true">
+                <h3 class="handle-drag-title">Done</h3>
+                <div class="dropzone">
+                    <div class="card" draggable="true">
+                        <div class="status red"></div>
+                        <div class="content"> Next Level Week</div>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
     </div>
 
-    <script src="script.js" defer></script>
+    <script src="card.js" defer></script>
+    <script src="board.js" defer></script>
     
 </body>
 </html>

@@ -13,9 +13,14 @@ body {
     color: white;
 }
 
+.column {
+    min-height: 100vh;
+    min-width: 316px;
+    margin: 0 5px;
+}
+
 .boards {
     display: flex;
-
     margin-top: 32px;
 }
 
@@ -23,8 +28,8 @@ body {
     background: #141316;
     border: 1px solid #FD951F11;
     border-radius: 4px;
-
-    margin: 0 16px;
+    width: 284px;
+    margin: 5px 16px;
 }
 
 .board h3 {
