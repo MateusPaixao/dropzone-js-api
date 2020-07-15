@@ -60,7 +60,12 @@ body {
     height: 8px;
     background: gray;
     margin-bottom: 16px;
+    margin-right: 5px;
     border-radius: 8px;
+}
+
+.container-status {
+    display: flex;
 }
 
 .status.green {

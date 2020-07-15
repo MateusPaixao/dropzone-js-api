@@ -3,6 +3,8 @@
 const cards = document.querySelectorAll('.card')
 const dropzones = document.querySelectorAll('.dropzone')
 
+let data = null
+
 cards.forEach(card => {
     card.addEventListener('dragstart', dragstart) // começou a arrastar
     card.addEventListener('drag', drag) // arrastando
@@ -11,6 +13,10 @@ cards.forEach(card => {
 
 
 function dragstart(e){
+    
+    console.log(e.target)
+
+
     // console.log('CARD: Start dragging')
     dropzones.forEach(dropzone => dropzone.classList.add('highlight'))
 
@@ -68,6 +74,6 @@ function dragleave(){
 }
 
 function drop(){
-    console.log('DROPZONE: Dropped') // soltei algo na zona
+    // console.log('DROPZONE: Dropped') // soltei algo na zona
     this.classList.remove('over')
 }
